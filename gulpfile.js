@@ -23,7 +23,7 @@ global.$ = {
     del: require('del'),
     gulp: require('gulp'),
     pngquant: require('imagemin-pngquant'),
-    //browserSync: require('browser-sync').create(),
+    browserSync: require('browser-sync').create(),
     gp: require('gulp-load-plugins')(),
     gcmq: require('gulp-group-css-media-queries')
 };
@@ -31,3 +31,16 @@ global.$ = {
 $.path.task.forEach(function(taskPath) {
     require(taskPath)();
 });
+
+$.gulp.task('default', $.gulp.series(
+    'clean',
+    $.gulp.parallel(
+        'sass',
+        'pug',
+        'scripts'
+    ),
+    $.gulp.parallel(
+        'watch',
+        'serve'
+    )
+));
