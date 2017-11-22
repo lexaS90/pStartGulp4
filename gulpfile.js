@@ -5,20 +5,24 @@ global.$ = {
       		style: 'src/style/app.scss',
       		html: 'src/template/**/*.pug',
             script: 'src/js/app.js',
+            image: 'src/img/**/*.*',
         },
         dist: {
       		style: 'dist/assets/css/',
       		html: 'dist/',
             script: 'dist/assets/js/',
+            image: 'dist/assets/img/',
         },
         watch: {
         	style: 'src/style/**/*.scss',
         	html: 'src/template/**/*.pug',
             script: 'src/js/**/*.js',
+            image: 'src/img/**/*.*',
         }
     },
+    del: require('del'),
     gulp: require('gulp'),
-    //del: require('del'),
+    pngquant: require('imagemin-pngquant'),
     //browserSync: require('browser-sync').create(),
     gp: require('gulp-load-plugins')(),
     gcmq: require('gulp-group-css-media-queries')

@@ -9,11 +9,14 @@
   "author": "Stupakov Alexy",
   "license": "ISC",
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^1.0.1",
     "gulp-csso": "^3.0.0",
     "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-imagemin": "^4.0.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
@@ -21,6 +24,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "imagemin-pngquant": "^5.0.1"
   }
 }

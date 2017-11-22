@@ -14,11 +14,11 @@ module.exports = function () {
                     'Opera 12.1'
                 ]
 						}))
-						.pipe($.gcmq())
-						.pipe($.gulp.dest($.path.dist.style))
-						.pipe($.gp.csso())
-						.pipe($.gp.sourcemaps.write('./'))						
-						.pipe($.gp.rename({ suffix: '.min' }))
+			.pipe($.gcmq())
+			.pipe($.gulp.dest($.path.dist.style))
+			.pipe($.gp.csso())
+			.pipe($.gp.sourcemaps.write('./'))
+			.pipe($.gp.rename({ suffix: '.min' }))
             .pipe($.gulp.dest($.path.dist.style))
     });
 };
