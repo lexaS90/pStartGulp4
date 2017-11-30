@@ -2,6 +2,7 @@ module.exports = function () {
     $.gulp.task('sass', function() {
         return $.gulp.src($.path.src.style)
             .pipe($.gp.sourcemaps.init())
+            .pipe($.gp.sassGlob())
             .pipe($.gp.sass())
             .on('error', $.gp.notify.onError({
                 title: 'Style'
@@ -16,9 +17,9 @@ module.exports = function () {
 						}))
 			.pipe($.gcmq())
 			.pipe($.gulp.dest($.path.dist.style))
-			.pipe($.gp.csso())
-			.pipe($.gp.sourcemaps.write('./'))
+			.pipe($.gp.csso())			
 			.pipe($.gp.rename({ suffix: '.min' }))
+            .pipe($.gp.sourcemaps.write('./'))
             .pipe($.gulp.dest($.path.dist.style))
     });
 };

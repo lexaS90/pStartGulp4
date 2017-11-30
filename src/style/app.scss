@@ -1,18 +1,10 @@
+@import "_tools/_tools.scss";
+@import "_blocks/**/*";
+
+
 body{
-	background-color: green;
+	background-color: red;
 }
-
-.item{
-	@media only screen and (max-width: 480px) {	  
-    color: red;	  
-	}
-}
-
 h1{
-	font-size: 30px;
-	transition: all .1s;
-
-	@media only screen and (max-width: 480px) {	  
-    color: green;	  
-	}
+	color: green;
 }

@@ -5,19 +5,36 @@ html(lang="ru")
     link(rel='stylesheet', type='text/css', href='assets/css/app.min.css')
    
   body
+
     h1 Pug - node template engine
-    .items
 
-      .item
-        span.icon 12
-        |test1
+    .advant
+      ul.c-nav.c-nav--inline
+        li.c-nav__item
+          i.fa.fa-home
+          |  Home
+        li.c-nav__item
+          i.fa.fa-star
+          |  News
+        li.c-nav__item.c-nav__item--right
+          i.fa.fa-user
+          |  Contact
+      
+      .items
+        .item
+          span.icon 12
+          |test1
 
-      .item
-        span.icon 123
-        |test1
+        .item
+          span.icon 123
+          |test1
 
-      .item
-        span.icon 123
-        |test1
+        .item
+          span.icon 123
+          |test1
+
+        .item
+          span.icon 123
+          |test1
 
     script(src='assets/js/app.min.js') 
