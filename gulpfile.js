@@ -4,20 +4,23 @@ global.$ = {
         src: {
       		style: 'src/style/app.scss',
       		html: 'src/template/**/*.pug',
-            script: 'src/js/app.js',
-            image: 'src/img/**/*.*',
+          script: 'src/js/app.js',
+          image: 'src/img/**/*.*',
+          fonts: 'src/fonts/**/*.*',
         },
         dist: {
       		style: 'dist/assets/css/',
       		html: 'dist/',
-            script: 'dist/assets/js/',
-            image: 'dist/assets/img/',
+          script: 'dist/assets/js/',
+          image: 'dist/assets/img/',
+          fonts: 'dist/assets/fonts/'
         },
         watch: {
         	style: 'src/style/**/*.scss',
         	html: 'src/template/**/*.pug',
-            script: 'src/js/**/*.js',
-            image: 'src/img/**/*.*',
+          script: 'src/js/**/*.js',
+          image: 'src/img/**/*.*',
+          fonts: 'src/fonts/**/*.*',
         }
     },
     del: require('del'),
@@ -35,6 +38,7 @@ $.path.task.forEach(function(taskPath) {
 $.gulp.task('default', $.gulp.series(
     'clean',
     $.gulp.parallel(
+    		'fonts',
         'sass',
         'pug',
         'scripts'
