@@ -5,7 +5,7 @@ module.exports = function() {
             server: './dist'
         });
         $.browserSync.watch([
-          './dist/assets/css/app.min.css',
+         // './dist/assets/css/app.min.css',
       		'./dist/assets/js/app.js',
       		'./dist/*.html',
       		'./dist/assets/img/',

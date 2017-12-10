@@ -35,6 +35,15 @@ global.$ = {
     buffer: require('vinyl-buffer'),
 };
 
+global.product = false;
+global.dev = true;
+
+if(!!$.gp.util.env.production){
+    product =  true;
+    dev =  false;
+}
+
+
 $.path.task.forEach(function(taskPath) {
     require(taskPath)();
 });
