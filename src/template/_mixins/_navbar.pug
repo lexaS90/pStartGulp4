@@ -1,0 +1,6 @@
+mixin navbar (navList)
+	ul.c-nav.c-nav--inline.u-highest
+		each item in navList
+			span.c-nav__item
+				i.fa.fa-home
+					a(href= item.link) #{item.name}

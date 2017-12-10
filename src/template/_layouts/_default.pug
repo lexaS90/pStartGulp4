@@ -1,0 +1,25 @@
+include ../_mixins/_navbar
+include ../_mixins/_tabs
+include ../_data
+
+block vars
+	-
+		page = {
+			title: ''
+		}
+
+doctype html
+html(lang="ru")
+	head
+		link(rel='stylesheet', type='text/css', href='assets/css/app.min.css')
+ 
+		title= page.title
+
+	body
+		include ../_includes/_header
+
+		block content
+
+		include ../_includes/_footer
+
+		script(src='assets/js/app.js') 

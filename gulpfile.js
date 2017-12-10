@@ -3,8 +3,8 @@ global.$ = {
         task: require('./gulp/paths/tasks.js'),
         src: {
       		style: 'src/style/app.scss',
-      		html: 'src/template/**/*.pug',
-          script: 'src/js/app.js',
+      		html: ['src/template/*.pug', '!src/template/_*.pug'],
+          script: 'app.js',
           image: 'src/img/**/*.*',
           fonts: 'src/fonts/**/*.*',
         },
@@ -17,8 +17,8 @@ global.$ = {
         },
         watch: {
         	style: 'src/style/**/*.scss',
-        	html: 'src/template/**/*.pug',
-          script: 'src/js/**/*.js',
+            html: 'src/template/**/*.pug',
+          script: 'src/js/app.js',
           image: 'src/img/**/*.*',
           fonts: 'src/fonts/**/*.*',
         }
@@ -28,7 +28,11 @@ global.$ = {
     pngquant: require('imagemin-pngquant'),
     browserSync: require('browser-sync').create(),
     gp: require('gulp-load-plugins')(),
-    gcmq: require('gulp-group-css-media-queries')
+    gcmq: require('gulp-group-css-media-queries'),
+    watchify: require('watchify'),
+    browserify: require('browserify'),
+    source: require('vinyl-source-stream'),
+    buffer: require('vinyl-buffer'),
 };
 
 $.path.task.forEach(function(taskPath) {
@@ -38,7 +42,8 @@ $.path.task.forEach(function(taskPath) {
 $.gulp.task('default', $.gulp.series(
     'clean',
     $.gulp.parallel(
-    		'fonts',
+        'fonts',
+        'image',
         'sass',
         'pug',
         'scripts'

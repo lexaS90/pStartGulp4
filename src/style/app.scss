@@ -1,10 +1,37 @@
 @import "_tools/_tools.scss";
+@import "_components/_components.scss";
+@import "_base/_base.scss";
 @import "_blocks/**/*";
 
-
-body{
-	background-color: red;
+.header{
+	min-height: 100px;
+	background-color: #ccf;
 }
-h1{
-	color: green;
+
+.footer{
+	min-height: 100px;
+	background-color: #ffc;
+}
+
+.sec1{
+	background-color: #aaa;
+}
+
+.adv{
+	&__wrap{
+		@include wrapper();
+	}
+	&__items{
+		@include row-flex();
+	}
+	&__item{
+		@include col();
+		@include size(4);
+	}
+	&__title{
+
+	}
+	&__descr{
+
+	}
 }

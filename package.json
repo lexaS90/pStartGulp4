@@ -32,6 +32,11 @@
   },
   "dependencies": {
     "blaze": "^3.6.3",
-    "normalize.css": "^7.0.0"
+    "browserify": "^14.5.0",
+    "gulp-util": "^3.0.8",
+    "normalize.css": "^7.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
   }
 }

@@ -1,40 +1,23 @@
-doctype html
-html(lang="ru")
-  head
-    title pageTitle3
-    link(rel='stylesheet', type='text/css', href='assets/css/app.min.css')
-   
-  body
+extends _layouts/_default
 
-    h1 Pug - node template engine
 
-    .advant
-      ul.c-nav.c-nav--inline
-        li.c-nav__item
-          i.fa.fa-home
-          |  Home
-        li.c-nav__item
-          i.fa.fa-star
-          |  News
-        li.c-nav__item.c-nav__item--right
-          i.fa.fa-user
-          |  Contact
-      
-      .items
-        .item
-          span.icon 12
-          |test1
 
-        .item
-          span.icon 123
-          |test1
+block vars
+	-
+		page = {
+			title: 'home'
+		}
 
-        .item
-          span.icon 123
-          |test1
+block content
+	+navbar(navList)
 
-        .item
-          span.icon 123
-          |test1
+	section.section.adv
+		.adv__wrap
+			.adv__items
+				each item in adv
+					.adv__item
+						.adv__title= item.name
+						.adv__descr= item.descr
 
-    script(src='assets/js/app.min.js') 
+	section.tabs
+		+tabs(tabs)
