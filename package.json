@@ -28,15 +28,15 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "imagemin-pngquant": "^5.0.1",
-    "smart-grid": "^2.0.1"
-  },
-  "dependencies": {
-    "blaze": "^3.6.3",
+    "smart-grid": "^2.0.1",
     "browserify": "^14.5.0",
     "gulp-util": "^3.0.8",
-    "normalize.css": "^7.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "blaze": "^3.6.3",    
+    "normalize.css": "^7.0.0"    
   }
 }
