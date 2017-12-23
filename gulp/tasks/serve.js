@@ -6,10 +6,10 @@ module.exports = function() {
         });
         $.browserSync.watch([
          // './dist/assets/css/app.min.css',
-      		'./dist/assets/js/app.js',
-      		'./dist/*.html',
-      		'./dist/assets/img/',
-      		'./dist/assets/fonts/'
+      	//	'./dist/assets/js/app.js',
+      	//	'./dist/*.html',
+      	//	'./dist/assets/img/',
+      	//	'./dist/assets/fonts/'
         ], $.browserSync.reload);
     });
 };

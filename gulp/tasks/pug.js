@@ -5,6 +5,7 @@ module.exports = function () {
 	  	.on('error', $.gp.notify.onError({
           title: 'Pug'
 			}))
-	  	.pipe($.gulp.dest($.path.dist.html))
+		  .pipe($.gulp.dest($.path.dist.html))
+		  .on('end', $.browserSync.reload);
 	});
 }

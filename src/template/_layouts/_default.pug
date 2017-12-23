@@ -1,12 +1,12 @@
-include ../_mixins/_navbar
-include ../_mixins/_tabs
 include ../_data
 
+-
+	page = {
+		title: '',
+		home: 'not-home',
+	}
+
 block vars
-	-
-		page = {
-			title: ''
-		}
 
 doctype html
 html(lang="ru")
@@ -32,4 +32,4 @@ html(lang="ru")
 
 		include ../_includes/_footer
 
-		script(src='assets/js/app.js') 
+		script(src='assets/js/app.min.js') 

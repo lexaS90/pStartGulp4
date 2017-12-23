@@ -1,8 +1,10 @@
 function buildScript(file, watch, uglify) {
+
+  var debug = product ? true : false;
   
   var props = {
     entries: $.path.watch.script,
-    debug : true,
+    debug : debug,
     transform:  []
   };
 
@@ -18,10 +20,11 @@ function buildScript(file, watch, uglify) {
           }
       ))
       .pipe($.source(file))
-      //.pipe($.buffer())
-      //.pipe($.gp.uglify())
-     // .pipe($.gp.rename({ suffix: '.min' }))
-      .pipe($.gulp.dest($.path.dist.script));
+      .pipe(product ? $.buffer() : $.gp.util.noop())
+      .pipe(product ? $.gp.uglify() : $.gp.util.noop())
+      .pipe($.gp.rename({ suffix: '.min' }))
+      .pipe($.gulp.dest($.path.dist.script))
+      .pipe($.browserSync.reload({stream: true}));
   }
 
   // listen for an update and run rebundle

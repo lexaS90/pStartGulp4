@@ -3,7 +3,7 @@ global.$ = {
         task: require('./gulp/paths/tasks.js'),
         src: {
       		style: 'src/style/app.scss',
-      		html: ['src/template/*.pug', '!src/template/_*.pug'],
+      		html: ['src/template/**/*.pug', '!src/template/**/_*.pug'],
           script: 'app.js',
           image: 'src/img/**/*.*',
           fonts: 'src/fonts/**/*.*',
