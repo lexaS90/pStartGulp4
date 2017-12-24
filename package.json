@@ -9,11 +9,11 @@
   "author": "Stupakov Alexy",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.21.0",
+    "browserify": "^14.5.0",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-browserify": "^0.5.1",
     "gulp-cache": "^1.0.1",
     "gulp-csso": "^3.0.0",
     "gulp-group-css-media-queries": "^1.2.0",
@@ -25,23 +25,20 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.2",
     "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
     "imagemin-pngquant": "^5.0.1",
     "smart-grid": "^2.0.1",
-    "browserify": "^14.5.0",
-    "gulp-util": "^3.0.8",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.9.0"
   },
   "dependencies": {
     "blaze": "^3.6.3",
     "bootstrap": "^4.0.0-beta.2",
-    "install": "^0.10.2",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
-    "npm": "^5.6.0",
     "popper.js": "^1.12.9"
   }
 }
