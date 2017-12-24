@@ -4,7 +4,6 @@
 @import "_blocks/**/*";
 
 .header{
-	min-height: 3000px;
 	background-color: red;
 }
 
@@ -18,16 +17,7 @@
 }
 
 .adv{
-	&__wrap{
-		@include wrapper();
-	}
-	&__items{
-		@include row-flex();
-	}
-	&__item{
-		@include col();
-		@include size(4);
-	}
+	
 	&__title{
 
 	}

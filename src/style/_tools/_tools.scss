@@ -1,10 +1,22 @@
-@import '../../../node_modules/normalize.css/normalize';
 @import 'variables';
+
+/**
+ *  Uncomment if use blaze
+ */
+@import '../../../node_modules/normalize.css/normalize';
+@import 'grid';
+@import 'blaze';
+
+/**
+ * Uncomment if use bootstrup
+ */
+//@import 'custom-bootstrup';
+
+
 @import 'function';
 @import 'extends';
 @import 'mixins';
-@import 'grid';
-@import 'blaze';
+
 
 
 /*
@@ -12,19 +24,3 @@
 @import '../../vendor/sass-burger/burger';
 
 */
-
-.advant{
-	@include wrapper();
-	border: 1px solid green;
-}
-
-.items{
-	@include row-flex();
-}
-
-.item{
-	border: 1px solid blue;
-	@include col();
-	@include size(3);
-	@include size-md(6);
-}
