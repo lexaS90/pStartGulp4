@@ -6,6 +6,7 @@
 
 #### Как запустить проект
 npm run gulp
+
 npm run gulp -- --production
 
 
