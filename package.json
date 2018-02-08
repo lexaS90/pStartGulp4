@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Starting template",
   "scripts": {
-    "gulp": "gulp",
+    "dev": "gulp",
+    "product": "npm run dev -- --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stupakov Alexy",
