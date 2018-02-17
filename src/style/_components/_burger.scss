@@ -1,0 +1,19 @@
+@import '../../node_modules/sass-burger/burger';
+
+.menu-button {
+    padding: 25px 20px;
+    display: none;
+  
+    @include media-max($mobile-switch){
+      display: block;
+    }
+  
+  }
+
+.burger-icon {
+    @include burger(30px, 5px, 5px, #7c8287);
+}
+
+.menu-button.is-active .burger-icon {
+    @include burger-to-cross;  
+}

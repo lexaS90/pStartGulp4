@@ -2,7 +2,7 @@ global.$ = {
     path: {
         task: require('./gulp/paths/tasks.js'),
         src: {
-      		style: 'src/style/app.scss',
+      	    style: ['src/style/app.scss'],
       		html: ['src/template/**/*.pug', '!src/template/**/_*.pug'],
           script: 'app.js',
           image: 'src/img/**/*.*',
@@ -16,8 +16,8 @@ global.$ = {
           fonts: 'dist/assets/fonts/'
         },
         watch: {
-        	style: 'src/style/**/*.scss',
-            html: 'src/template/**/*.pug',
+        	style: ['src/style/**/*.scss'],
+            html: ['src/template/**/*.pug'],
           script: 'src/js/app.js',
           image: 'src/img/**/*.*',
           fonts: 'src/fonts/**/*.*',
@@ -41,6 +41,19 @@ global.dev = true;
 if(!!$.gp.util.env.production){
     product =  true;
     dev =  false;
+}
+
+
+
+/**
+ * Example page generated
+ */
+
+if (dev){
+    $.path.src.style.push('src/examples/demo.scss');
+    $.path.src.html.push('src/examples/demo.pug');
+    $.path.watch.style.push('src/examples/demo.scss');
+    $.path.watch.html.push('src/examples/demo.pug');
 }
 
 

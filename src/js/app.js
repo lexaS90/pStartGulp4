@@ -7,6 +7,19 @@
 //  global.Popper = require('popper.js');
 //  require('bootstrap');
 
+
+require('./_components/_mNavBar.js')();
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Example
  */

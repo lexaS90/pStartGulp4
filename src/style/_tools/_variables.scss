@@ -37,11 +37,20 @@ $break_xs: 576px;
 
 // Mobile switch
 
-$mobile-switch: $break_lg;
+$mobile-switch: $break_md;
 
 
 // =============================================================================
 // Reload variables
 // =============================================================================
 
+// Navbar
+$nav-background-color: #ccc;
+$nav-color: #333;
+$nav-item-hover-background-color: red;
+$nav-item-hover-color: green;
+$nav-padding: 0;
+$nav-item-padding: 1.2em;
 
+$nav-height: 0;
+$nav-item-height: 78px;
