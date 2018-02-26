@@ -1,0 +1,51 @@
+mixin d-color()
+    section.section.d-color.comp
+        .comp__descr
+            p Настройки цветов в файле <strong>src/style/_tools/_variable.scss</strong>
+            <pre><code class="language-scss">
+                .
+                    // Colors
+                    $text-color: #505356;
+                    $accent-text-color: #7c8287;
+                    $main-color: #009dea;
+                    $accent-color: #d93603;
+                    $success-color: #3c763d;
+                    $error-color: #a94442;
+                    $disable-color: #D2D2D2;
+                    $color-tint: 9 !default;
+            </code></pre>
+
+        .container
+            .section-title Color
+            .row
+                .col-md-4
+                    .d-color__item.d-color__item--main.clearfix
+                        .d-color__item-color
+                        .d-color__item-name Main color<br>
+                            span.d-color__item-value
+                    .d-color__item.d-color__item--accent.clearfix
+                        .d-color__item-color
+                        .d-color__item-name Accent color<br>
+                            span.d-color__item-value
+                .col-md-4
+                    .d-color__item.d-color__item--text.clearfix
+                        .d-color__item-color
+                        .d-color__item-name Text color<br>
+                            span.d-color__item-value
+                    .d-color__item.d-color__item--accent-text.clearfix
+                        .d-color__item-color
+                        .d-color__item-name Accent text color<br>
+                            span.d-color__item-value
+                .col-md-4
+                    .d-color__item.d-color__item--success.clearfix
+                        .d-color__item-color
+                        .d-color__item-name Success color<br>
+                            span.d-color__item-value
+                    .d-color__item.d-color__item--error.clearfix
+                        .d-color__item-color
+                        .d-color__item-name Error color<br>
+                            span.d-color__item-value
+                    .d-color__item.d-color__item--disable.clearfix
+                        .d-color__item-color
+                        .d-color__item-name Disable color<br>
+                            span.d-color__item-value

@@ -9,13 +9,7 @@
 
 
 require('./_components/_mNavBar.js')();
-
-
-
-
-
-
-
+require('./_components/_navBar.js')();
 
 
 

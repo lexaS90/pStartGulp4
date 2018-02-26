@@ -1,7 +1,7 @@
 //  Headings
 
 h1, h2, h3, h4, h5, h6{
-	color: $text-color;
+	color: $accent-text-color;
   margin: 0 0 rem(10px) 0;
 }
 
@@ -82,7 +82,7 @@ em{
 }
 
 hr{
-  border: solid $accent-color;
+  border: solid $text-color;
   border-width: 1px 0 0;
   clear: both;
   margin: 10px 0 30px;
@@ -120,6 +120,13 @@ dt {
   margin: rem(8px) 0 rem(2px) 0;
 }
 dd {
-  margin-left: 4px;
+  margin-left: rem(20px);
   font-size: rem(15px);
+}
+
+code{
+  padding: 0.06em 0.3em;
+  color: #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 0.1875rem;
 }

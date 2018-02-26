@@ -1,19 +1,187 @@
 @import "../style/_tools/_tools.scss";
-@import "../style/_components/_components.scss";
+//@import "../style/_components/_components.scss";
+@import "../style/_components.scss";
 @import "../style/_base/_base.scss";
-
-
 
 
 *, *::after, *::before {
     box-sizing: border-box;
 }
 
+.comp {
+    position: relative
+}
 
-// ------------------------ Nav Bar ------------------------
+.comp .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    z-index: 1;
+    display: block
+}
 
+.comp .modal-dialog {
+    width: 90%
+}
 
+.comp .popover {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    margin: 20px
+}
 
+#source-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    font-weight: 700
+}
 
+.comp__descr {
+    display: none;
+}
 
-// ------------------------ End nav Bar ------------------------
+#source-modal .close{
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+
+    &:hover{
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        filter: alpha(opacity=50);
+        opacity: .5;
+    }
+}
+
+#source-button{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    font-weight: bold;
+
+    &:hover{
+        color: #fff;
+        background-color: #449d44;
+        border-color: #398439;
+    }
+
+}
+
+.d-name{
+    font-weight: bold;
+    color: $accent-text-color;
+}
+
+.d-subName{
+    color: $text-color;
+    font-size: 14px;
+}
+
+.d-color{
+
+}
+
+.d-color__item{
+    margin-bottom: 10px;
+}
+
+.d-color__item-color{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.d-color__item-name{
+    float: left;
+    @extend .d-name;
+}
+
+.d-color__item-value{
+    @extend .d-subName;
+}
+
+.d-color__item--main .d-color__item-color{
+    background-color: $main-color;
+}
+
+.d-color__item--accent .d-color__item-color{
+    background-color: $accent-color;
+}
+
+.d-color__item--text .d-color__item-color{
+    background-color: $text-color;
+}
+
+.d-color__item--accent-text .d-color__item-color{
+    background-color: $accent-text-color;
+}
+
+.d-color__item--success .d-color__item-color{
+    background-color: $success-color;
+}
+
+.d-color__item--error .d-color__item-color{
+    background-color: $error-color;
+}
+
+.d-color__item--disable .d-color__item-color{
+    background-color: $disable-color;
+}
+
+.d-btn{
+
+}
+
+.d-btn__item{
+    margin-bottom: 10px;
+}
+
+.d-btn__item-left{
+    float: left;
+    margin-right: 20px;
+}
+
+.d-btn__item-right{
+    float: left;
+    @extend .d-name;
+}
+
+.d-btn__item-subName{
+    @extend .d-subName;
+}

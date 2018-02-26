@@ -1,0 +1,16 @@
+@import '../../../node_modules/blaze/scss/components.buttons.scss';
+
+.c-button{
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.c-button--accent {
+    @include button-color($accent-color);
+}
+
+.c-button--disabled{
+    cursor: not-allowed;
+    opacity: $button-disabled-opacity;
+}

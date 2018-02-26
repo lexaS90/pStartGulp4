@@ -39,9 +39,84 @@
 
 .c-nav__item,
 .c-nav__content {
-    height: $nav-item-height;
-    line-height: $nav-item-height;
     margin-bottom: 0;
+    height: auto;
+    line-height: inherit;
+}
+
+.c-nav__content{
+    height: $nav-height;
+}
+
+.c-nav__item{
+    padding: 0;
+    position:relative;
+}
+
+.c-nav__link{
+    line-height: $nav-item-height;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 0 $nav-item-padding;
+
+    &:hover{
+        color: $nav-item-hover-color;
+        text-decoration: none;
+    }
+
+    &:focus{
+        color: $nav-item-hover-color;
+    }
+
+    &:active{
+        color: $nav-item-hover-color;
+    }
+}
+
+.c-nav--dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+
+    > .c-nav__item{
+
+        > .c-nav__link{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    
+}
+
+// Hide drop down
+
+.c-nav--dropdown .c-nav__item,
+.c-nav--dropdown .c-nav__content{
+   display: none;    
+}
+
+// Show drop down
+
+.c-nav__item--dropdown > .c-nav .c-nav__item{
+    opacity: 1;
+}
+
+.c-nav__item--dropdown-active > .c-nav .c-nav__item{
+    display: block;
+    opacity: 0;
+    animation: menu 300ms ease-in-out forwards;
+}
+
+@keyframes menu{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 #mobilePanel{
@@ -96,3 +171,6 @@
         display: block;
       }
 }
+
+
+// Animation

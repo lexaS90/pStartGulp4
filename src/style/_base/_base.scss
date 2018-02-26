@@ -2,3 +2,24 @@
 @import 'fonts';
 @import 'typography';
 
+.section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section__wrap{
+    @include wrapper();
+}
+
+.section__row{
+    @include row-flex();
+}
+
+.section-title{
+    font-size: rem(36px);
+    border-bottom: 1px solid $accent-color;
+    color: #000;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+}
+

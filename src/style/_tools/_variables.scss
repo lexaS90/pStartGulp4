@@ -3,39 +3,61 @@
 // =============================================================================
 
 
-// Fonts
+
+/*
+ * Fonts
+ */
+
 $main-font-family: 'Geometria';
 //$accent-font-family: 'EtelkaMediumPro';
 $main-font-size: 16px;
 
-// Colors
-$text-color: #505356;
-$accent-text-color: #7c8287;
+
+/*
+ * Color
+ */
+$color-green: #4CAF50;
+$color-red: #F44336;
+
+$text-color: #333;
+$accent-text-color: #000;
 $main-color: #009dea;
 $accent-color: #d93603;
-$success-color: #3c763d;
-$error-color: #a94442;
+$success-color: $color-green;
+$error-color: $color-red;
 $disable-color: #D2D2D2;
 $color-tint: 9 !default;
 
-// Link
+/*
+ * Link
+ */
+
 $link-color: $main-color;
 $link-color-hover: lighten($main-color, 30%);
 $link-color-focus: darken($main-color, 30%);
 
-// Img
+/*
+ * Img
+ */
+
 $img-folder: '../img/';
 $img-site-folder: '../img/site/';
 $img-content-folder: '../img/content/';
 
 
-// Grid
+/*
+ * Grid
+ */
+
 $break_lg: 1200px;
 $break_md: 992px;
 $break_sm: 720px;
 $break_xs: 576px;
 
-// Mobile switch
+/*
+ *  Mobile switch
+ */
+
 
 $mobile-switch: $break_md;
 
@@ -44,13 +66,51 @@ $mobile-switch: $break_md;
 // Reload variables
 // =============================================================================
 
-// Navbar
-$nav-background-color: #ccc;
-$nav-color: #333;
-$nav-item-hover-background-color: red;
-$nav-item-hover-color: green;
-$nav-padding: 0;
-$nav-item-padding: 1.2em;
 
-$nav-height: 0;
-$nav-item-height: 78px;
+/*
+ *  Navbar
+ */
+
+// Фон навигации
+ $nav-background-color: #333;
+
+// Цвет текста навигации
+$nav-color: #ccc;
+
+// Цвет фона пункта меню навигации
+$nav-item-hover-background-color: transparent;
+
+// Цвет текста пункта меню навигации
+$nav-item-hover-color: $accent-color;
+
+// Отступ сверху и снизу меню
+$nav-padding: 0;
+
+// Отступ слева и справа пункта меню (только в em)
+$nav-item-padding: 1.8em;
+
+// Высота меню
+$nav-height: 100px;
+
+// Высота пунктаменю
+$nav-item-height: 100px;
+
+// Цвет фона активного пункта меню
+$nav-item-active-background-color: transparent;
+
+// Цвет текста активного пункта меню
+$nav-item-active-color: $accent-color;
+
+
+
+/*
+ *  Button
+ */
+
+$button-background-color: $main-color;
+
+// Внутренние отступы
+$button-padding: 12px 56px;
+
+$button-border-radius: 2px;
+$button-font-size: 1em;

@@ -1,34 +1,172 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="assets/css/demo.min.css")
-        title Document
-    body.page
+extends _layouts/_example
 
-        #mobilePanel.mobilePanel
-            .mobilePanel__menu
-            .mobilePanel__contact Contact
 
-        main.page__main#mainContent
-            .navbar
-                .navbar__wrap
-                    .navbar__left
-                        img(src="/assets/img/site/logo.png", alt="")
-                    nav.navbar__center
-                        ul.c-nav.c-nav--inline#mainMenu
-                            li.c-nav__item Home
-                            li.c-nav__item News                        
-                            li.c-nav__item News                        
-                            li.c-nav__item News                        
-                    .navbar__right Contact
-                    a.menu-button#menuBurger
-                        span.burger-icon
+block content
 
+    //- #mobilePanel.mobilePanel
+    //-     .mobilePanel__menu
+    //-     .mobilePanel__contact Contact
+
+    main.page__main#mainContent
+
+        +d-color()
+        +d-typography()
+        +d-btn()
+
+
+
+
+        //- .comp
+        //-     //- -------------------------- documentation --------------------------
+        //-     .comp__descr
+        //-         <pre><code class="language-pug">
+        //-             .
+        //-                 .navbar
+        //-                     .navbar__wrap
+        //-                         .navbar__left
+        //-                             img(src="/assets/img/site/logo.png", alt="")
+        //-                         nav.navbar__center
+        //-                             ul.c-nav.c-nav--inline#mainMenu
+
+        //-                                 li.c-nav__item
+        //-                                     a(href="#").c-nav__link Главная
+
+        //-                                 li.c-nav__item.c-nav__item--active.c-nav__item--dropdown
+        //-                                     a(href="#").c-nav__link О нас
+        //-                                     ul.c-nav.c-nav--dropdown
+        //-                                         li.c-nav__item
+        //-                                             a(href="#").c-nav__link Кто мы
+        //-                                         li.c-nav__item
+        //-                                             a(href="#").c-nav__link Как мы работаем
+        //-                                         li.c-nav__item
+        //-                                             a(href="#").c-nav__link Почему мы
+        //-                                         li.c-nav__item
+        //-                                             a(href="#").c-nav__link Наша команда
+
+        //-                                 li.c-nav__item.c-nav__item--dropdown
+        //-                                     a(href="#").c-nav__link Услуги
+        //-                                         ul.c-nav.c-nav--dropdown
+        //-                                             li.c-nav__item
+        //-                                                 a(href="#").c-nav__link Кто мы
+        //-                                             li.c-nav__item
+        //-                                                 a(href="#").c-nav__link Как мы работаем
+                                            
+        //-                                 li.c-nav__item
+        //-                                     a(href="#").c-nav__link Контакты
+                                            
+        //-                         .navbar__right Contact
+        //-                         a.menu-button#menuBurger
+        //-                             span.burger-icon
+        //-         </code></pre>
+        //-     //- -------------------------------------------------------------------
+        //-     .navbar
+        //-         .navbar__wrap
+        //-             .navbar__left
+        //-                 img(src="/assets/img/site/logo.png", alt="")
+        //-             nav.navbar__center
+        //-                 ul.c-nav.c-nav--inline#mainMenu
+
+        //-                     li.c-nav__item
+        //-                         a(href="#").c-nav__link Главная
+
+        //-                     li.c-nav__item.c-nav__item--active.c-nav__item--dropdown
+        //-                         a(href="#").c-nav__link О нас
+        //-                         ul.c-nav.c-nav--dropdown
+        //-                             li.c-nav__item
+        //-                                 a(href="#").c-nav__link Кто мы
+        //-                             li.c-nav__item
+        //-                                 a(href="#").c-nav__link Как мы работаем
+        //-                             li.c-nav__item
+        //-                                 a(href="#").c-nav__link Почему мы
+        //-                             li.c-nav__item
+        //-                                 a(href="#").c-nav__link Наша команда
+
+        //-                     li.c-nav__item.c-nav__item--dropdown
+        //-                         a(href="#").c-nav__link Услуги
+        //-                             ul.c-nav.c-nav--dropdown
+        //-                                 li.c-nav__item
+        //-                                     a(href="#").c-nav__link Кто мы
+        //-                                 li.c-nav__item
+        //-                                     a(href="#").c-nav__link Как мы работаем
+                                
+        //-                     li.c-nav__item
+        //-                         a(href="#").c-nav__link Контакты
+                                
+        //-             .navbar__right Contact
+        //-             a.menu-button#menuBurger
+        //-                 span.burger-icon
 
         
         
+        
+        
+        
+        
+        
+        
+        
+        //- section.section.s1
+        //-     .section__wrap
+        //-         h2.section-title Typography. Section title
+        //-         .section__row
+        //-             .s1__left
+        //-                 h1 h1 Lorem ipsum dolor sit amet.
+        //-                 h2 h2 Lorem ipsum dolor sit amet.
+        //-                 h3 h3 Lorem ipsum dolor sit amet.
+        //-                 h4 h4 Lorem ipsum dolor sit amet.
+        //-                 h5 h5 Lorem ipsum dolor sit amet.
+        //-                 h6 h6 Lorem ipsum dolor sit amet.
 
-        script(src='assets/js/app.min.js') 
+        //-                 hr
+
+        //-                 address
+        //-                     strong Twitter, Inc.
+        //-                     br
+        //-                     | 	  1355 Market Street, Suite 900
+        //-                     br
+        //-                     | 	  San Francisco, CA 94103
+        //-                     br
+        //-                     abbr(title='Phone') P:
+        //-                         |  (123) 456-7890
+        //-                     blockquote
+        //-                         p
+        //-                             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                
+        //-             .s1__right
+        //-                 h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        //-                 p
+        //-                 | Lorem 
+        //-                 a(href='#') link tag
+        //-                 | amet, 
+        //-                 strong strong tag
+        //-                 |  elit. 
+        //-                 del del tag
+        //-                 |  labore, quae quidem magni culpa eos.
+        //-                 p
+        //-                 | Explicabo nam 
+        //-                 mark mark tag
+        //-                 |  dolores, eaque dolor 
+        //-                 em em tag
+        //-                 | , facere enim ut, sit, 
+        //-                 ins ins tag
+        //-                 |  libero consectetur! Blanditiis repellendus earum
+
+        //-             .s1__left
+        //-                 ul
+        //-                     li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        //-                     li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        //-                     li
+        //-                         ul
+        //-                             li Lorem ipsum dolor.
+        //-                             li Lorem ipsum dolor.
+        //-                     li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        
+        //-                 ol
+        //-                     li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        //-                     li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        //-             .s1__right
+        //-                 dl
+        //-                     dt Lorem ipsum dolor.
+        //-                     dd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, tempore?
+        //-                     dd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, tempore?
+

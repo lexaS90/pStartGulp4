@@ -1,0 +1,107 @@
+mixin d-btn()
+    section.section.d-btn.comp
+        .comp__descr
+            p Настройки в файле <strong>src/style/_tools/_variable.scss</strong>
+            <pre><code class="language-scss">
+                .
+                    /*
+                    *  Button
+                    */
+
+                    $button-background-color: $main-color;
+
+                    // Внутренние отступы
+                    $button-padding: 12px 56px;
+
+                    $button-border-radius: 2px;
+                    $button-font-size: 1em;
+            </code></pre>
+            p Примеры
+            <pre><code class="language-pug">
+                .
+                    a.c-button Отправить
+                    input(type="button", value="Отправить").c-button
+                    button(type="button").c-button Отправить
+                    a.c-button.c-button--accent Отправить
+
+            </code></pre>
+            p Более подробно на сайте 
+                a(href="https://www.blazeui.com/components/buttons", target="_blank") blaze
+        .container
+            .section-title Buttons
+            .row
+                .col-md-4
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            a.c-button Отправить
+                        .d-btn__item-right Main<br>
+                            span.d-btn__item-subName Link
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            input(type="button", value="Отправить").c-button
+                        .d-btn__item-right Main<br>
+                            span.d-btn__item-subName Input
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            button(type="button").c-button Отправить
+                        .d-btn__item-right Main<br>
+                            span.d-btn__item-subName Button
+                    
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            a.c-button.c-button--disabled Отправить
+                        .d-btn__item-right Main<br>
+                            span.d-btn__item-subName Link
+                
+                .col-md-4
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            a.c-button.c-button--accent Отправить
+                        .d-btn__item-right Accent<br>
+                            span.d-btn__item-subName Link
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            input(type="button", value="Отправить").c-button.c-button--accent
+                        .d-btn__item-right Accent<br>
+                            span.d-btn__item-subName Input
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            button(type="button").c-button.c-button--accent Отправить
+                        .d-btn__item-right Accent<br>
+                            span.d-btn__item-subName Button
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            button(type="button", disabled="disabled").c-button.c-button--accent Отправить
+                        .d-btn__item-right Disabled<br>
+                            span.d-btn__item-subName Button
+
+                .col-md-4
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            a.c-button.c-button--success Отправить
+                        .d-btn__item-right Success<br>
+                            span.d-btn__item-subName Link
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            input(type="button", value="Отправить").c-button.c-button--error
+                        .d-btn__item-right Error<br>
+                            span.d-btn__item-subName Input
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left
+                            button(type="button").c-button.c-button--ghost Отправить
+                        .d-btn__item-right Ghost<br>
+                            span.d-btn__item-subName Button
+
+                    .d-btn__item.clearfix
+                        .d-btn__item-left(style="width:100%;")
+                            button(type="button").c-button.c-button--accent.c-button--block Block

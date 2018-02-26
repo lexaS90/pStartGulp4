@@ -6,6 +6,7 @@ module.exports = function(){
     // Get and clone main menu
     var menu = document.getElementById('mainMenu');
     var mobileMenu = menu.cloneNode(true);
+    mobileMenu.removeAttribute('id')
         
     // Remove and add class for mobile menu
     mobileMenu.classList.remove('c-nav--inline');
