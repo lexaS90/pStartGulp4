@@ -1,0 +1,26 @@
+mixin d-elements()
+    section.section.d-elem.comp
+        .comp__descr
+            div
+                p Настройки бургера файле <strong>src/style/_tools/_variable.scss</strong>
+                <pre><code class="language-scss">
+                    .
+                        /*
+                        *  Burger
+                        */
+                        $burger-width: 30px;
+                        $burger-line-height: 5px;
+                        $burger-line-offset: 5px;
+                        $burger-color: #7c8287;
+                </code></pre>
+                p Вызов бургура
+                <pre><code class="language-pug">
+                    .
+                        +burger('menuBurger')
+                </code></pre>
+        
+        .container
+            .section-title Elements
+            .row
+                .col-md-2
+                    +burger('demoBurger')

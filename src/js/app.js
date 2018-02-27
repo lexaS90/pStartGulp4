@@ -8,15 +8,4 @@
 //  require('bootstrap');
 
 
-require('./_components/_mNavBar.js')();
-require('./_components/_navBar.js')();
-
-
-
-
-/**
- * Example
- */
-
-var work = require('./_components/_test.js');
-work();
+require('../components/_component')();

@@ -1,0 +1,36 @@
+mixin nav-bar() 
+    .navbar
+        .navbar__wrap
+            .navbar__left
+                img(src="/assets/img/site/logo.png", alt="")
+            nav.navbar__center
+                ul.c-nav.c-nav--inline#mainMenu
+
+                    li.c-nav__item
+                        a(href="#").c-nav__link Главная
+
+                    li.c-nav__item.c-nav__item--active.c-nav__item--dropdown
+                        a(href="#").c-nav__link О нас
+                        ul.c-nav.c-nav--dropdown
+                            li.c-nav__item
+                                a(href="#").c-nav__link Кто мы
+                            li.c-nav__item
+                                a(href="#").c-nav__link Как мы работаем
+                            li.c-nav__item
+                                a(href="#").c-nav__link Почему мы
+                            li.c-nav__item
+                                a(href="#").c-nav__link Наша команда
+
+                    li.c-nav__item.c-nav__item--dropdown
+                        a(href="#").c-nav__link Услуги
+                            ul.c-nav.c-nav--dropdown
+                                li.c-nav__item
+                                    a(href="#").c-nav__link Кто мы
+                                li.c-nav__item
+                                    a(href="#").c-nav__link Как мы работаем
+                        
+                    li.c-nav__item
+                        a(href="#").c-nav__link Контакты
+                        
+            .navbar__right Contact
+            +burger('menuBurger')

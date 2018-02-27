@@ -2,6 +2,8 @@
 
 module.exports = function(el, option){
     var th = this;
+    var option = option || {};
+    var el = document.getElementById(el);
 
     this.open = function(){
         el.classList.add('is-active');
@@ -13,11 +15,13 @@ module.exports = function(el, option){
         el.classList.toggle('is-active');
     }    
 
-    el.addEventListener('click', function(){
-        th.toggle();
-        if ('onToggle' in option){
-            option.onToggle.apply(th);
-        }
-            
-    });
+    if (el){
+        el.addEventListener('click', function(){
+            th.toggle();
+            if ('onToggle' in option){
+                option.onToggle.apply(th);
+            }
+                
+        });
+    }    
 }

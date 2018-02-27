@@ -1,0 +1,13 @@
+@import '../../node_modules/sass-burger/burger';
+
+.burger-icon {
+    @include burger($burger-width, $burger-line-height, $burger-line-offset, $burger-color);
+}
+
+.burger{
+    cursor: pointer;
+}
+
+.burger.is-active .burger-icon {
+    @include burger-to-cross;  
+}

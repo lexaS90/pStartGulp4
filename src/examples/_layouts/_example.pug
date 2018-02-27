@@ -1,6 +1,10 @@
+include ../../components/_component
+
 include ../_includes/_color
 include ../_includes/_btn
 include ../_includes/_typography
+include ../_includes/_elements
+include ../_includes/_nav-bar
 
 
 <!DOCTYPE html>
@@ -28,9 +32,7 @@ html(lang="en")
                     .modal-header
                         button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
                         h4.modal-title Source Code
-                    .modal-body
-
-        script(src='assets/js/app.min.js')
+                    .modal-body        
 
         script(src='https://code.jquery.com/jquery-1.10.2.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
@@ -126,6 +128,7 @@ html(lang="en")
                 });
 
                 })();
+        script(src='assets/js/app.min.js')
 
                
 

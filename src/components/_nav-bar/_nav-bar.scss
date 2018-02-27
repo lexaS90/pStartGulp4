@@ -1,5 +1,3 @@
-@import './burger';
-
 .navbar{    
     background-color: $nav-background-color;
 }
@@ -171,6 +169,18 @@
         display: block;
       }
 }
+
+// Hide burger in desctop
+
+#menuBurger {
+    padding: 25px 20px;
+    display: none;
+  
+    @include media-max($mobile-switch){
+      display: block;
+    }
+  
+  }
 
 
 // Animation
