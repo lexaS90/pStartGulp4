@@ -5,15 +5,17 @@ global.$ = {
       	    style: ['src/style/app.scss'],
       		html: ['src/template/**/*.pug', '!src/template/**/_*.pug'],
           script: 'app.js',
-          image: 'src/img/**/*.*',
+          image: ['src/img/**/*.*', '!src/img/icons'],
           fonts: 'src/fonts/**/*.*',
+          svg: 'src/img/icons/*.svg',
         },
         dist: {
       		style: 'dist/assets/css/',
       		html: 'dist/',
           script: 'dist/assets/js/',
           image: 'dist/assets/img/',
-          fonts: 'dist/assets/fonts/'
+          fonts: 'dist/assets/fonts/',
+          svg: 'dist/assets/img/',
         },
         watch: {
         	style: ['src/style/**/*.scss'],
@@ -21,6 +23,7 @@ global.$ = {
           script: 'src/js/app.js',
           image: 'src/img/**/*.*',
           fonts: 'src/fonts/**/*.*',
+          svg: 'src/img/icons/*.svg',
         }
     },
     del: require('del'),
