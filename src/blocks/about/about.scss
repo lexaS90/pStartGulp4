@@ -1,0 +1,12 @@
+about {
+	$block-name: &;
+	
+}
+
+.about__wrap{
+	@include wrapper();
+
+	h2{
+		color: red;
+	}
+}

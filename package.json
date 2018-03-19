@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "gulp",
     "product": "npm run dev -- --production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "blockAdd": "node createBlock.js"
   },
   "author": "Stupakov Alexy",
   "license": "ISC",

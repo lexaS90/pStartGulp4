@@ -1,0 +1,49 @@
+{
+  "blocks": {
+    "btn": [],
+    "test": [],
+    "form": [],
+    "about": [],
+    "advantages": [],
+    "b1": [],
+    "b2": [],
+    "c-button": []
+  },
+  "path": {
+    "src": {
+      "srcPath": "./src/",
+      "blocksDirName": "blocks",
+      "style": [
+        "src/style/app.scss"
+      ],
+      "html": [
+        "src/template/**/*.pug",
+        "!src/template/**/_*.pug"
+      ],
+      "script": "app.js",
+      "image": "src/img/**/*.*",
+      "fonts": "src/fonts/**/*.*"
+    },
+    "dist": {
+      "style": "dist/assets/css/",
+      "html": "dist/",
+      "script": "dist/assets/js/",
+      "image": "dist/assets/img/",
+      "fonts": "dist/assets/fonts/"
+    },
+    "watch": {
+      "style": [
+        "src/style/**/*.scss",
+        "src/blocks/**/*.scss"
+      ],
+      "html": [
+        "src/template/**/*.pug",
+        "src/blocks/**/*.pug"
+      ],
+      "script": "src/js/app.js",
+      "image": "src/img/**/*.*",
+      "fonts": "src/fonts/**/*.*",
+      "blocks": "./projectConfig.json"
+    }
+  }
+}

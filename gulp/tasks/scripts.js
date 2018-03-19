@@ -1,3 +1,21 @@
+// // Получение настроек проекта из projectConfig.json
+// let dirs = projectConfig.path.src;
+
+// let lists = blockList;
+
+// // Сообщение, записываемое в стилевой файл
+// let styleFileMsg = '/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Не пишите сюда ничего вручную, все такие правки будут потеряны при следующей компиляции.\n */\n\n';
+
+// // Формирование и запись диспетчера подключений (_blocks.scss)
+// let jsImports = styleFileMsg;
+// jsImports += 'module.exports = function () {\n';
+// lists.js.forEach(function(blockPath) {
+//   jsImports += '  require( \''+blockPath+'\')();\n';
+// });
+// jsImports += '}';
+// $.fs.writeFileSync(dirs.srcPath + 'js/_blocks.js', jsImports);
+
+
 function buildScript(file, watch, uglify) {
 
   var debug = product ? true : false;

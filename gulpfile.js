@@ -1,39 +1,30 @@
+// global.customFunc = require('./gulp/function');  
+global.projectConfig = require('./projectConfig.json');
 global.$ = {
-    path: {
-        task: require('./gulp/paths/tasks.js'),
-        src: {
-      	    style: ['src/style/app.scss'],
-      		html: ['src/template/**/*.pug', '!src/template/**/_*.pug'],
-          script: 'app.js',
-          image: 'src/img/**/*.*',
-          fonts: 'src/fonts/**/*.*',
-        },
-        dist: {
-      		style: 'dist/assets/css/',
-      		html: 'dist/',
-          script: 'dist/assets/js/',
-          image: 'dist/assets/img/',
-          fonts: 'dist/assets/fonts/'
-        },
-        watch: {
-        	style: ['src/style/**/*.scss'],
-            html: ['src/template/**/*.pug'],
-          script: 'src/js/app.js',
-          image: 'src/img/**/*.*',
-          fonts: 'src/fonts/**/*.*',
-        }
-    },
-    del: require('del'),
-    gulp: require('gulp'),
-    pngquant: require('imagemin-pngquant'),
-    browserSync: require('browser-sync').create(),
-    gp: require('gulp-load-plugins')(),
-    gcmq: require('gulp-group-css-media-queries'),
-    watchify: require('watchify'),
-    browserify: require('browserify'),
-    source: require('vinyl-source-stream'),
-    buffer: require('vinyl-buffer'),
+  path: {
+      task: require('./gulp/paths/tasks.js'),
+      src: projectConfig.path.src,
+      dist: projectConfig.path.dist,
+      watch: projectConfig.path.watch,
+  },
+  del: require('del'),
+  gulp: require('gulp'),
+  pngquant: require('imagemin-pngquant'),
+  browserSync: require('browser-sync').create(),
+  gp: require('gulp-load-plugins')(),
+  gcmq: require('gulp-group-css-media-queries'),
+  watchify: require('watchify'),
+  browserify: require('browserify'),
+  source: require('vinyl-source-stream'),
+  buffer: require('vinyl-buffer'),    
+  fs: require('fs'),  
 };
+// global.blockList = customFunc.getBlocksList(projectConfig);
+
+
+/**
+ * Check develop type
+ */
 
 global.product = false;
 global.dev = true;
@@ -49,20 +40,34 @@ if(!!$.gp.util.env.production){
  * Example page generated
  */
 
-if (dev){
-    $.path.src.style.push('src/examples/demo.scss');
-    $.path.src.html.push('src/examples/demo.pug');
-    $.path.watch.style.push('src/examples/demo.scss');
-    $.path.watch.html.push('src/examples/demo.pug');
-}
+// if (dev){
+//     $.path.src.style.push('src/examples/demo.scss');
+//     $.path.src.html.push('src/examples/demo.pug');
+//     $.path.watch.style.push('src/examples/demo.scss');
+//     $.path.watch.html.push('src/examples/demo.pug');
+// }
 
+
+
+/**
+ * Require tasks
+ */
 
 $.path.task.forEach(function(taskPath) {
     require(taskPath)();
 });
 
+
+
+/**
+ * Default tasks
+ */
+
 $.gulp.task('default', $.gulp.series(
-    'clean',
+    $.gulp.parallel(
+        'clean',
+        'blocks',
+    ),
     $.gulp.parallel(
         'fonts',
         'image',
