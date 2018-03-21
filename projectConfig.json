@@ -1,13 +1,8 @@
 {
   "blocks": {
-    "btn": [],
-    "test": [],
-    "form": [],
-    "about": [],
-    "advantages": [],
-    "b1": [],
-    "b2": [],
-    "c-button": []
+    "c-button": [],
+    "c-navbar": [],
+    "c-burger": []
   },
   "path": {
     "src": {

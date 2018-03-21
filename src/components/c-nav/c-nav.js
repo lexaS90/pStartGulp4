@@ -1,5 +1,5 @@
 var Slideout = require('Slideout');
-var Burger = require('../_burger/_burger');
+var Burger = require('../c-burger/c-burger');
 
 module.exports = function(){
         

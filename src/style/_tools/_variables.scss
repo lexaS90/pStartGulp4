@@ -68,42 +68,6 @@ $mobile-switch: $break_md;
 
 
 /*
- *  Navbar
- */
-
-// Фон навигации
- $nav-background-color: #333;
-
-// Цвет текста навигации
-$nav-color: #ccc;
-
-// Цвет фона пункта меню навигации
-$nav-item-hover-background-color: transparent;
-
-// Цвет текста пункта меню навигации
-$nav-item-hover-color: $accent-color;
-
-// Отступ сверху и снизу меню
-$nav-padding: 0;
-
-// Отступ слева и справа пункта меню (только в em)
-$nav-item-padding: 1.8em;
-
-// Высота меню
-$nav-height: 100px;
-
-// Высота пунктаменю
-$nav-item-height: 100px;
-
-// Цвет фона активного пункта меню
-$nav-item-active-background-color: transparent;
-
-// Цвет текста активного пункта меню
-$nav-item-active-color: $accent-color;
-
-
-
-/*
  *  Button
  */
 

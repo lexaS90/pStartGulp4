@@ -4,12 +4,7 @@
  */
 
 module.exports = function () {
-  require( '../.././src/blocks/btn//btn.js')();
-  require( '../.././src/blocks/test//test.js')();
-  require( '../.././src/blocks/form//form.js')();
-  require( '../.././src/blocks/about//about.js')();
-  require( '../.././src/blocks/advantages//advantages.js')();
-  require( '../.././src/blocks/b1//b1.js')();
-  require( '../.././src/blocks/b2//b2.js')();
   require( '../.././src/blocks/c-button//c-button.js')();
+  require( '../.././src/blocks/c-navbar//c-navbar.js')();
+  require( '../.././src/blocks/c-burger//c-burger.js')();
 }

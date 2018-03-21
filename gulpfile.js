@@ -40,12 +40,12 @@ if(!!$.gp.util.env.production){
  * Example page generated
  */
 
-// if (dev){
-//     $.path.src.style.push('src/examples/demo.scss');
-//     $.path.src.html.push('src/examples/demo.pug');
-//     $.path.watch.style.push('src/examples/demo.scss');
-//     $.path.watch.html.push('src/examples/demo.pug');
-// }
+if (dev){
+    $.path.src.style.push('src/examples/demo.scss');
+    $.path.src.html.push('src/examples/demo.pug');
+    $.path.watch.style.push('src/examples/demo.scss');
+    $.path.watch.html.push('src/examples/demo.pug');
+}
 
 
 
