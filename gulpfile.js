@@ -73,7 +73,8 @@ $.gulp.task('default', $.gulp.series(
         'image',
         'sass',
         'pug',
-        'scripts'
+        'scripts',
+        'svg'
     ),
     $.gulp.parallel(
         'watch',

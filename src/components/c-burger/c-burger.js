@@ -1,5 +1,3 @@
-
-
 module.exports = function(el, option){
     var th = this;
     var option = option || {};

@@ -1,4 +1,4 @@
-Настройки меню в файле **src/blocks/c-navbar/c-navbar.scss**
+Настройки меню в файле **src/style/_tools/_variables.scss**
 ```javascript
     $nav-background-color: #333;
     $nav-color: #ccc;

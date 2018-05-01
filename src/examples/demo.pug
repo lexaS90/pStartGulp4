@@ -8,27 +8,15 @@ block content
         .mobilePanel__contact Contact
 
     main.page__main#mainContent
-        +d-nav-bar()
+       
+        //- Nav bar
+
+        .comp
+            .comp__descr
+                include:markdown-it(html='true') ../blocks/c-navbar/readme.md
+            +c-navbar()
+
         +d-color()
         +d-typography()
-
-
-
-
-        //- +c-button()
-
-
-
-
-
-
-
-
-
-
-
-        //- +d-nav-bar()
-        //- +d-color()
-        //- +d-typography()
-        //- +d-btn()
+        +d-btn()
         //- +d-elements()

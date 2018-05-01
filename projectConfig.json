@@ -16,15 +16,20 @@
         "!src/template/**/_*.pug"
       ],
       "script": "app.js",
-      "image": "src/img/**/*.*",
-      "fonts": "src/fonts/**/*.*"
+      "image": [
+        "src/img/**/*.*",
+        "!src/img/svgIcons/*.svg"
+      ],
+      "fonts": "src/fonts/**/*.*",
+      "svgIcons": "src/img/svgIcons/*.svg"
     },
     "dist": {
       "style": "dist/assets/css/",
       "html": "dist/",
       "script": "dist/assets/js/",
       "image": "dist/assets/img/",
-      "fonts": "dist/assets/fonts/"
+      "fonts": "dist/assets/fonts/",
+      "svgIcons": "dist/assets/img/"
     },
     "watch": {
       "style": [
@@ -38,7 +43,8 @@
       "script": "src/js/app.js",
       "image": "src/img/**/*.*",
       "fonts": "src/fonts/**/*.*",
-      "blocks": "./projectConfig.json"
+      "blocks": "./projectConfig.json",
+      "svgIcons": "src/img/svgIcons/*.svg"
     }
   }
 }

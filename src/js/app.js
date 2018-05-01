@@ -5,6 +5,14 @@
 require('./_blocks')();
 
 /**
+ * svg4everybody
+ */
+
+ require('svg4everybody')();
+ //svg4everybody();
+
+
+/**
  * Uncomment if use bootstrup
  */
 

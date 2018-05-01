@@ -21,7 +21,7 @@ module.exports = function(){
     var slideout = new Slideout({
         'panel': document.getElementById('mainContent'),
         'menu': document.getElementById('mobilePanel'),
-        'padding': 256,
+        'padding': 230,
         'tolerance': 70,
         'side': 'right',
     });
@@ -42,16 +42,34 @@ module.exports = function(){
         burger.close();
     });
 
+    // Список dropdown меню
+    var menuItems = document.querySelectorAll('.c-nav__item');
 
-    let selectors = document.querySelectorAll('.c-nav__item');
+    // Клик не по пункту меню
+    window.onclick = function(event) {
+        if (!event.target.matches('.c-nav__link')) {
+            
+            
+            for(var i = 0; i < menuItems.length; i++){
+                 menuItems[i].classList.remove('c-nav__item--dropdown-active');
+            }
+        }
+    }
+    
 
-    for(let i = 0; i < selectors.length; i++){
-        selectors[i].addEventListener('click', function(e) {
-            let th = this;
+    for(var i = 0; i < menuItems.length; i++){
+        menuItems[i].addEventListener('click', function(e) {
+            var th = this;
 
-            for(let y = 0; y < selectors.length; y++){
-                if (selectors[y] != th){
-                    selectors[y].classList.remove('c-nav__item--dropdown-active');
+            // Если dropdown то отменяем переход
+
+            if (e.target.parentNode.matches('.c-nav__item--dropdown')){
+                e.preventDefault();
+            }
+
+            for(var y = 0; y < menuItems.length; y++){
+                if (menuItems[y] != th){
+                    menuItems[y].classList.remove('c-nav__item--dropdown-active');
                 }
             }
 

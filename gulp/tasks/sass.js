@@ -1,19 +1,3 @@
-// // Получение настроек проекта из projectConfig.json
-// let dirs = projectConfig.path.src;
-
-// let lists = blockList;
-
-// // Сообщение, записываемое в стилевой файл
-// let styleFileMsg = '/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Не пишите сюда ничего вручную, все такие правки будут потеряны при следующей компиляции.\n */\n\n';
-
-// // Формирование и запись диспетчера подключений (_blocks.scss)
-// let styleImports = styleFileMsg;
-// lists.css.forEach(function(blockPath) {
-//   styleImports += '@import \''+blockPath+'\';\n';
-// });
-// $.fs.writeFileSync(dirs.srcPath + 'style/_blocks.scss', styleImports);
-
-
 module.exports = function () {
     $.gulp.task('sass', function() {
         return $.gulp.src($.path.src.style)
